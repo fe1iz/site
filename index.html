@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Электронный дневник</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#upload"> Загрузить файл с оценками </a></li>
+                <li><a href="#edit-section"> Редактировать данные журнала </a></li>
+                <li><a href="#table-stats"> Таблицы статистика </a></li>
+                <li><a href="#graph-stats"> Графики статистика </a></li>
+                <li><a href="#help"> Помощь </a></li>
+                <li><a href="#about"> О сайте </a></li>
+            </ul>
+        </nav>
+        
+        <section id="upload" class="content-section">
+            <h2> Загрузить оценки </h2>
+            <input type="file" id="file-input" accept=".csv, .txt" style="display: none;">
+            <button id="upload-button"> Выбрать файл для загрузки  </button>
+            <button id="download-data-button"> Скачать данные с сайта </button>
+
+            <div id="data-preview">
+                <!-- Сюда будет вставлена таблица с данными -->
+            </div>
+        </section>
+        
+        <section id="edit-section" class="content-section" style="display: none;">
+            <h2>Добавить или редактировать ученика</h2>
+            <form id="student-form">
+                <input type="text" id="student-name" placeholder="ФИО ученика" required>
+                <input type="text" id="student-class" placeholder="Класс" required>
+                <input type="number" id="grade-informatics" placeholder="Оценка по информатике" min="1" max="5">
+                <input type="number" id="grade-physics" placeholder="Оценка по физике" min="1" max="5">
+                <input type="number" id="grade-math" placeholder="Оценка по математике" min="1" max="5">
+                <input type="number" id="grade-literature" placeholder="Оценка по литературе" min="1" max="5">
+                <input type="number" id="grade-music" placeholder="Оценка по музыке" min="1" max="5">
+                <button type="button" onclick="addOrUpdateStudent()"> Сохранить </button>
+            </form>
+        </section>
+
+        <section id="table-stats" class="content-section" style="display: none;">
+            <h2> Статистика в таблицах </h2>
+            <!-- Место для таблицы со статистикой -->
+        </section>
+
+        <section id="graph-stats" class="content-section" style="display: none;">
+            <h2> Статистика в графиках </h2>
+            <div id="charts">
+                <canvas id="class-chart" width="400" height="200"></canvas>
+                <canvas id="student-chart" width="400" height="200"></canvas>
+            </div>
+        </section>
+
+        <section id="help" class="content-section content-section2" style="display: none;">
+            <h2>Помощь</h2>
+            <p>Данный электронный дневник обладает следующими функциями:</p>
+            <h3>Загрузить оценки</h3>
+            <p>На этой вкладке вы можете загрузить файлы с оценками в форматах .csv, .txt иди .xls. Для загрузки нажмите на кнопку "Выбрать файл для загрузки". После выбора файла он будет автоматически обработан и отображен в виде таблицы на странице.</p>
+            <h3>Редактировать журнал</h3>
+            <p>Эта вкладка позволяет добавлять и изменять записи оценок учеников. Для добавления или редактирования информации заполните форму данными ученика и нажмите кнопку "Сохранить".</p>
+            <h3>Таблицы статистика</h3>
+            <p>В этом разделе вы можете увидеть статистику по классам и предметам: средний балл, медиану оценок, количество и процентное распределение оценок по каждому предмету.</p>
+            <h3>Графики статистика</h3>
+            <p>Здесь представлена статистика в графическом виде. Графики могут помочь вам лучше визуализировать распределение оценок и успеваемость учеников.</p>
+            <h3>О программе</h3>
+            <p>На этой вкладке содержится информация о разработчике электронного дневника, их контактные данные и другие сведения о проекте.</p>
+        </section>
+
+        <section id="about" class="content-section content-section2" style="display: none;">
+            <h2>О программе</h2>
+            <p>ФИО разработчика: </p>
+            <h4> Сычук Денис Анатольевич </h4>
+            <p>Контактные данные: </p> 
+            <p> VK <a href="https://vk.com/denis_sychuk"> Сычук Денис </a> </p>
+            <p> Telegram <a href="https://t.me/Denis_Sychuk"> @Denis_Sychuk </a> </p>
+            <img src="developer.jpg" alt="Фото разработчика">
+        </section>
+    </body>
+</html>

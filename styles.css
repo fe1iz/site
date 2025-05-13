@@ -1,0 +1,223 @@
+body {
+    background-color: #FFF0F5; /* Светлый розово-персиковый фон */
+    color: #6C757D; /* Темно-серый текст */
+    font-family: Arial, sans-serif; /* Современный шрифт для читаемости */
+}
+
+table {
+    width: 100%;
+    border-spacing: 0 10px;
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    background-color: #FFDAB9;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #DDA0DD; /* Добавляем границы для ячеек */
+    text-align: left;
+    min-width: 60px; /* Минимальная ширина ячейки, можно подстроить под свои нужды */
+    line-height: 1.5; /* Установка высоты строки */
+}
+
+thead th {
+    background-color: #FFB6C1;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: sticky; 
+    top: 0; 
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFE4E1; /* Чередуем цвета для строк таблицы */
+}
+
+nav ul {
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #FFB6C1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #FFF0F5; 
+    border-bottom: 1px solid #fff; 
+}
+
+/* Стиль для ссылок при наведении */
+nav ul li a:hover {
+    background-color: #FFDAB9; 
+    color: #6C757D;
+}    
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Убедитесь, что навигация находится над другими элементами */
+}
+
+.content-section,
+#help,
+#about {
+    background-color: #FFE4E1; 
+    color: #6C757D; 
+}
+
+.content-section {
+    display: block; 
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.content-section2 {
+    max-width: 800px;
+}
+
+.active-tab {
+    display: block;
+}
+
+button,
+#download-data-button {
+    background-color: #FFB6C1; /* Розовый фон для кнопок */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover,
+#download-data-button:hover {
+    background-color: #FF69B4; 
+}
+
+#edit-section {
+    padding: 20px;
+    background-color: #FFB6C1; 
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 60%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#student-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Растягивание элементов формы на всю доступную ширину */
+}
+
+#student-form input[type="text"],
+#student-form input[type="number"],
+#student-form button {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #FF69B4; /* Границы в ярко-розовом цвете */
+}
+
+#student-form button {
+    display: block;
+    background-color: #FF69B4;
+    color: #fff;
+    margin-top: 20px;
+    align-self: center;
+}
+
+#student-form button:hover {
+    background-color: #FF1493; /* Глубокий розовый при наведении */
+}
+
+.content-section {
+    margin-left: 220px; /* Установите отступ, равный или больше ширины навигационной панели */
+    transition: margin-left 0.3s; /* Плавное изменение отступа */
+}
+
+#student-form button {
+    padding: 10px 20px; /* Увеличенные отступы внутри кнопки */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Добавлен верхний отступ для кнопки */
+    width: auto; /* Автоматическая ширина для кнопки */
+    align-self: center; /* Расположение кнопки по центру */
+}
+
+#edit-section label {
+    width: 100%; /* Ширина меток на всю доступную ширину */
+    margin-bottom: 5px; /* Отступ снизу для меток */
+}
+
+#help {
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#help h2, #help h3 {
+    color: #6C757D;
+}
+
+#help p {
+    margin: 10px 0;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#about {
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    text-align: center;
+    color: #6C757D;;
+}
+
+#about p {
+    margin: 10px 0;
+}
+
+#about a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+#about a:hover {
+    text-decoration: underline;
+}
+
+#about img {
+    display: block;
+    max-width: 380px;
+    margin: 20px auto;
+    border-radius: 10%;
+}
+
+#download-data-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
